@@ -84,6 +84,7 @@ DATABASES = {
     }
 }
 
+
 # Enable CORS
 CORS_ALLOW_ALL_ORIGINS = True
 
