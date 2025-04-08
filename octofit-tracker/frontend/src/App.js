@@ -15,7 +15,6 @@ function App() {
       socket.send(JSON.stringify({ message: 'Hello, WebSocket!' }));
     };
     
-
     socket.onmessage = (event) => {
       console.log('Message from server:', event.data);
     };
