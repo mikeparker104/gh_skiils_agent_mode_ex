@@ -2,6 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+import argparse
 
 
 def main():
@@ -15,6 +16,14 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
+
+    parser = argparse.ArgumentParser(description="Run the development server.")
+    parser.add_argument('--port', type=int, default=8000, help='Port number to run the server on')
+    args, unknown = parser.parse_known_args()
+
+    if 'runserver' in sys.argv and not any(arg.startswith('0.0.0.0:') for arg in sys.argv):
+        sys.argv.append(f'0.0.0.0:{args.port}')
+
     execute_from_command_line(sys.argv)
 
 
