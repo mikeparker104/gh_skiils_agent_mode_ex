@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'djongo',  # Added djongo explicitly
     'octofit_tracker',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Set the ASGI application for Channels
+ASGI_APPLICATION = 'octofit_tracker.asgi.application'
