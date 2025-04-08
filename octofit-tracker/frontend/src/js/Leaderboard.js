@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const API_SUFFIX = 'https://expert-acorn-7v745r9qvgvcprjj-8000.app.github.dev/api/leaderboard/';
+const API_SUFFIX = 'https://expert-acorn-7v745r9qvgvcprjj-8000.app.github.dev/api/';
 
 function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
