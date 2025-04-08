@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-const API_SUFFIX = 'https://expert-acorn-7v745r9qvgvcprjj-8000.app.github.dev/api/';
+const API_SUFFIX = 'https://expert-acorn-7v745r9qvgvcprjj-8000.app.github.dev/api/activities';
 
 function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch(`${API_SUFFIX}/activities`)
+    fetch(`${API_SUFFIX}`)
       .then(response => response.json())
       .then(data => setActivities(data));
   }, []);
