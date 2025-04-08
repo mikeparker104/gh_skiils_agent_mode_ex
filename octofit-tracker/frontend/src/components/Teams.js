@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+const API_SUFFIX = '/api/v1';
+
 function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch('https://expert-acorn-7v745r9qvgvcprjj-8000.app.github.dev/api/teams')
+    fetch(`${API_SUFFIX}/teams`)
       .then(response => response.json())
       .then(data => setTeams(data));
   }, []);

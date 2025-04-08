@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+const API_SUFFIX = '/api/v1';
+
 function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('https://expert-acorn-7v745r9qvgvcprjj-8000.app.github.dev/api/users')
+    fetch(`${API_SUFFIX}/users`)
       .then(response => response.json())
       .then(data => setUsers(data));
   }, []);

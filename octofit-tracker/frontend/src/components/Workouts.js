@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+const API_SUFFIX = '/api/v1';
+
 function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    fetch('https://expert-acorn-7v745r9qvgvcprjj-8000.app.github.dev/api/workouts')
+    fetch(`${API_SUFFIX}/workouts`)
       .then(response => response.json())
       .then(data => setWorkouts(data));
   }, []);
