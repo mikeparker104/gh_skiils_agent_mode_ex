@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'corsheaders',
+    'djongo',  # Added djongo explicitly
     'octofit_tracker',
 ]
 
